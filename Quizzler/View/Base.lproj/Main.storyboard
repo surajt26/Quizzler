@@ -34,13 +34,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="PCm-2r-2rW" userLabel="Question Label">
-                                        <rect key="frame" x="0.0" y="30" width="361" height="529"/>
+                                        <rect key="frame" x="0.0" y="30" width="361" height="534"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WD-cn-a0y" userLabel="True Button">
-                                        <rect key="frame" x="0.0" y="569" width="361" height="80"/>
+                                        <rect key="frame" x="0.0" y="574" width="361" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="tXf-wQ-3eV"/>
                                         </constraints>
@@ -49,9 +49,12 @@
                                         <state key="normal" title="True" backgroundImage="Rectangle">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TqR-zt-zV0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yV-O6-RNO" userLabel="False Button">
-                                        <rect key="frame" x="0.0" y="659" width="361" height="80"/>
+                                        <rect key="frame" x="0.0" y="664" width="361" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="IXv-2b-PLW"/>
                                         </constraints>
@@ -60,13 +63,16 @@
                                         <state key="normal" title="False" backgroundImage="Rectangle">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g15-yw-KjW"/>
+                                        </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="amg-Pv-VKp">
-                                        <rect key="frame" x="0.0" y="749" width="361" height="11"/>
+                                        <rect key="frame" x="0.0" y="754" width="361" height="6"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.27843137254901962" green="0.38039215686274508" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="10" id="aRw-Aa-1Wc"/>
+                                            <constraint firstAttribute="height" constant="5" id="aRw-Aa-1Wc"/>
                                         </constraints>
                                         <color key="progressTintColor" red="1" green="0.45882352939999999" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="trackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -86,6 +92,13 @@
                             <constraint firstAttribute="bottom" secondItem="Xyk-w8-t7Z" secondAttribute="bottom" id="yAJ-yo-urZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="falseButton" destination="8yV-O6-RNO" id="civ-Ok-D1D"/>
+                        <outlet property="progressBar" destination="amg-Pv-VKp" id="oyb-Vm-pdW"/>
+                        <outlet property="questionLabel" destination="PCm-2r-2rW" id="I9t-tB-jPG"/>
+                        <outlet property="scoreLabel" destination="s81-SP-eiU" id="di6-zN-S6J"/>
+                        <outlet property="trueButton" destination="7WD-cn-a0y" id="Ahb-Bs-yth"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
